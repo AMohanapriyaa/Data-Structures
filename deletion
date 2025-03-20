@@ -1,0 +1,47 @@
+I) Delete at the end
+ import java.util.Scanner;
+ class Main
+ {
+     public static void main(String args[]){
+         Scanner sc= new Scanner(System.in);
+         int i;
+         int n=sc.nextInt();
+         int[] arr=new int[10];
+         for(i=0;i<n;i++)
+         {
+         arr[i]=sc.nextInt();
+         }
+         for(i=0;i<n-1;i++)
+         System.out.print(arr[i]+" ");
+     }
+ }
+
+
+
+II) Delete at the begining
+
+ import java.util.Scanner;
+ class Main
+ {
+     public static void main(String args[]){
+         Scanner sc= new Scanner(System.in);
+         int i;
+         int n=sc.nextInt();
+         int[] arr=new int[10];
+         for(i=0;i<n;i++)
+         {
+         arr[i]=sc.nextInt();
+         }
+         int[] newarr=new int[n-1];
+         for(i=1;i<n;i++)
+         newarr[i-1]=arr[i];
+         int count=0;
+         for(int len:newarr)
+         count++;
+         for(i=0;i<count;i++)
+         System.out.print(newarr[i]+" ");
+     }
+ }
+
+III) Delete the specific element
+
