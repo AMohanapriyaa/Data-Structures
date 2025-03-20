@@ -1,0 +1,57 @@
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[]){
+        Scanner sc= new Scanner(System.in);
+        int i;
+        int n=sc.nextInt();
+        int[] arr=new int[10];
+        for(i=0;i<n;i++)
+        {
+        arr[i]=sc.nextInt();
+        
+        }
+        int ele =sc.nextInt();
+        arr[n]=ele;
+        n++;
+        for(i=0;i<n;i++)
+        System.out.print(arr[i]+" ");
+    }
+}
+
+
+
+II) Insert at the begining
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[]){
+        Scanner sc= new Scanner(System.in);
+        int i;
+        int n=sc.nextInt();
+        int[] arr=new int[10];
+        for(i=0;i<n;i++)
+        {
+        arr[i]=sc.nextInt();
+        
+        }
+        int ele =sc.nextInt();
+        /*insert at end
+        arr[n]=ele;
+        n++;*/
+        int[] newarr=new int[n+1];
+        newarr[0]=ele;
+        for(i=0;i<n;i++)
+        {
+         
+            newarr[i+1]=arr[i];
+        }
+        int count=0;
+        for(int len:newarr)
+        {
+            count++;
+        }
+        for(i=0;i<count;i++)
+        System.out.print(newarr[i]+" ");
+    }
+}
